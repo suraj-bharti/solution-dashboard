@@ -26,6 +26,15 @@ table {
 .table {
     overflow: auto;
 }
+table tr {
+    position: relative;
+}
+.table .edit {
+    position: absolute;
+    right: 25px;
+    background: #fff;
+    padding: 10px;
+}
 th {
     padding: 10px 5px;
 }
@@ -35,7 +44,7 @@ th {
 }
 
 .boxed {
-    margin: 80px 2%;
+    margin: 80px 2% 10px;
 }
 hr {
     margin: 10px 0;

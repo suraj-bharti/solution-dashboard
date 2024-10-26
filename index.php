@@ -126,10 +126,10 @@
 					<td>item 47</td>
 					<td>item 48</td>
 					<td>item 49</td>
-					<td>item 50</td>
+					<td>item 50 <div class="edit">Edit</div></td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td>1</td>
 					<td>item 1</td>
 					<td>item 2</td>
 					<td>item 3</td>
@@ -179,7 +179,7 @@
 					<td>item 47</td>
 					<td>item 48</td>
 					<td>item 49</td>
-					<td>item 50</td>
+					<td>item 50 <div class="edit">Edit</div></td>
 				</tr>
 			</table>
 			</div>
