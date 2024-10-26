@@ -19,7 +19,7 @@
             </div>
         </header>
 		<div class="boxed">
-        <form method="post" action="/update" @submit.prevent=onSubmit()>
+        <form method="post" action="data_insert.php">
             <div class="row">
 				<div class="col-2">
 					<label>Company</label>
@@ -144,11 +144,11 @@
 				</div>
 				<div class="col-2">
 					<label>Date of receipt</label>
-					<input type="text" name="date_of_receipt" v-model="form.date_of_receipt" required placeholder="Date of receipt">
+					<input type="date" name="date_of_receipt" v-model="form.date_of_receipt" required placeholder="Date of receipt">
 				</div>
 				<div class="col-2">
 					<label>Date of submission</label>
-					<input type="text" name="date_of_submission" v-model="form.date_of_submission" required placeholder="Date of submission">
+					<input type="date" name="date_of_submission" v-model="form.date_of_submission" required placeholder="Date of submission">
 				</div>
 				<div class="col-2">
 					<label>Tat</label>
@@ -170,6 +170,10 @@
 					<label>Bid support</label>
 					<input type="text" name="bid_support" v-model="form.bid_support" required placeholder="Bid support">
 				</div>
+                <div class="col-2">
+					<label>Biz Lead</label>
+					<input type="text" name="biz_lead" v-model="form.biz_lead" required placeholder="Biz Lead">
+				</div>
 				<div class="col-2">
 					<label>Transformation spoc</label>
 					<input type="text" name="transformation_spoc" v-model="form.transformation_spoc" required placeholder="Transformation spoc">
@@ -177,6 +181,10 @@
 				<div class="col-2">
 					<label>Designer name</label>
 					<input type="text" name="designer_name" v-model="form.designer_name" required placeholder="Designer name">
+				</div>
+                <div class="col-2">
+					<label>Ops Lead</label>
+					<input type="text" name="ops_lead" v-model="form.ops_lead" required ops_lead="Ops Lead">
 				</div>
 				<div class="col-2">
 					<label>Ops spoc</label>
@@ -207,8 +215,8 @@
 					<input type="text" name="year_reported" v-model="form.year_reported" required placeholder="Year reported">
 				</div>
 				<div class="col-2">
-					<label>Competition name</label>
-					<input type="text" name="competition_name" v-model="form.competition_name" required placeholder="Competition name">
+					<label>Competitor name</label>
+					<input type="text" name="competitor_name" v-model="form.competitor_name" required placeholder="Competitor name">
 				</div>
 				<div class="col-2">
 					<label>Gate 0</label>

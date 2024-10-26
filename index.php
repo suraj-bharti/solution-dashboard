@@ -23,6 +23,7 @@
 			<div class="table">
 			<table border="1">
 				<tr>
+					<th>#</th>
 					<th>BID</th>
 					<th>Company</th>
 					<th>Lob</th>
@@ -75,111 +76,59 @@
 					<th>Ebit_margin</th>
 					<th>Gross_margin</th>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>item 1</td>
-					<td>item 2</td>
-					<td>item 3</td>
-					<td>item 4</td>
-					<td>item 5</td>
-					<td>item 6</td>
-					<td>item 7</td>
-					<td>item 8</td>
-					<td>item 9</td>
-					<td>item 10</td>
-					<td>item 11</td>
-					<td>item 12</td>
-					<td>item 13</td>
-					<td>item 14</td>
-					<td>item 15</td>
-					<td>item 16</td>
-					<td>item 17</td>
-					<td>item 18</td>
-					<td>item 19</td>
-					<td>item 20</td>
-					<td>item 21</td>
-					<td>item 22</td>
-					<td>item 23</td>
-					<td>item 24</td>
-					<td>item 25</td>
-					<td>item 26</td>
-					<td>item 27</td>
-					<td>item 28</td>
-					<td>item 29</td>
-					<td>item 30</td>
-					<td>item 31</td>
-					<td>item 32</td>
-					<td>item 33</td>
-					<td>item 34</td>
-					<td>item 35</td>
-					<td>item 36</td>
-					<td>item 37</td>
-					<td>item 38</td>
-					<td>item 39</td>
-					<td>item 40</td>
-					<td>item 41</td>
-					<td>item 42</td>
-					<td>item 43</td>
-					<td>item 44</td>
-					<td>item 45</td>
-					<td>item 46</td>
-					<td>item 47</td>
-					<td>item 48</td>
-					<td>item 49</td>
-					<td>item 50 <div class="edit">Edit</div></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>item 1</td>
-					<td>item 2</td>
-					<td>item 3</td>
-					<td>item 4</td>
-					<td>item 5</td>
-					<td>item 6</td>
-					<td>item 7</td>
-					<td>item 8</td>
-					<td>item 9</td>
-					<td>item 10</td>
-					<td>item 11</td>
-					<td>item 12</td>
-					<td>item 13</td>
-					<td>item 14</td>
-					<td>item 15</td>
-					<td>item 16</td>
-					<td>item 17</td>
-					<td>item 18</td>
-					<td>item 19</td>
-					<td>item 20</td>
-					<td>item 21</td>
-					<td>item 22</td>
-					<td>item 23</td>
-					<td>item 24</td>
-					<td>item 25</td>
-					<td>item 26</td>
-					<td>item 27</td>
-					<td>item 28</td>
-					<td>item 29</td>
-					<td>item 30</td>
-					<td>item 31</td>
-					<td>item 32</td>
-					<td>item 33</td>
-					<td>item 34</td>
-					<td>item 35</td>
-					<td>item 36</td>
-					<td>item 37</td>
-					<td>item 38</td>
-					<td>item 39</td>
-					<td>item 40</td>
-					<td>item 41</td>
-					<td>item 42</td>
-					<td>item 43</td>
-					<td>item 44</td>
-					<td>item 45</td>
-					<td>item 46</td>
-					<td>item 47</td>
-					<td>item 48</td>
-					<td>item 49</td>
-					<td>item 50 <div class="edit">Edit</div></td>
+				<tr v-for="row in solutions" :key="row.id">
+					<td><a href="edit.php" class="btn">Edit</a></td>
+					<td>{{ row.id }}</td>
+					<td>{{ row.company }}</td>
+					<td>{{ row.lob }}</td>
+					<td>{{ row.sales_force_id }}</td>
+					<td>{{ row.vertical }}</td>
+					<td>{{ row.type_of_client }}</td>
+					<td>{{ row.market_served }}</td>
+					<td>{{ row.response_type }}</td>
+					<td>{{ row.commercials }}</td>
+					<td>{{ row.total_ftes }}</td>
+					<td>{{ row.fte_break_up }}</td>
+					<td>{{ row.waha_proposed }}</td>
+					<td>{{ row.waha }}</td>
+					<td>{{ row.location }}</td>
+					<td>{{ row.languages }}</td>
+					<td>{{ row.seeding }}</td>
+					<td>{{ row.hourly_rate }}</td>
+					<td>{{ row.acv }}</td>
+					<td>{{ row.tcv }}</td>
+					<td>{{ row.deal_term_years }}</td>
+					<td>{{ row.opportunity }}</td>
+					<td>{{ row.channels }}</td>
+					<td>{{ row.proposed_solution_highlights }}</td>
+					<td>{{ row.solution_drivers_win_themes }}</td>
+					<td>{{ row.transrowation_benefit }}</td>
+					<td>{{ row.transrowation_category }}</td>
+					<td>{{ row.tp_cloud_campus }}</td>
+					<td>{{ row.key_products_offered }}</td>
+					<td>{{ row.date_of_receipt }}</td>
+					<td>{{ row.date_of_submission }}</td>
+					<td>{{ row.tat }}</td>
+					<td>{{ row.status }}</td>
+					<td>{{ row.current_document_status }}</td>
+					<td>{{ row.type_of_bid }}</td>
+					<td>{{ row.bid_lead }}</td>
+					<td>{{ row.bid_support }}</td>
+					<td>{{ row.transrowation_spoc }}</td>
+					<td>{{ row.designer_name }}</td>
+					<td>{{ row.ops_spoc }}</td>
+					<td>{{ row.bd_support }}</td>
+					<td>{{ row.current_account_status_1st_level }}</td>
+					<td>{{ row.stage_2nd_level }}</td>
+					<td>{{ row.reason_3rd_level }}</td>
+					<td>{{ row.notes }}</td>
+					<td>{{ row.year_reported }}</td>
+					<td>{{ row.competition_name }}</td>
+					<td>{{ row.gate_0 }}</td>
+					<td>{{ row.gate_1 }}</td>
+					<td>{{ row.ebitda_margin }}</td>
+					<td>{{ row.ebit_margin }}</td>
+					<td>{{ row.gross_margin }}</td>
 				</tr>
 			</table>
 			</div>
@@ -193,7 +142,13 @@
         createApp({
             data() {
                 return {
-                    form: {}
+                    form: {},
+					solutions: [
+						{id: 1, company: 'Apple'},
+						{id: 2, company: 'Micorsoft'},
+						{id: 3, company: 'Facebook'},
+						{id: 4, company: 'GibHub'},
+					]
                 }
             },
             mounted(){

@@ -3,6 +3,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a.btn {
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+
 input, textarea, select {
     padding: 10px;
     border-radius: 4px;
