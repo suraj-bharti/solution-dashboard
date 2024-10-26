@@ -10,8 +10,9 @@ input, textarea, select {
     border: 1px solid #e9e4e4
 }
 label {
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 5px;
+    color: #777;
     display: block;
 }
 table {
@@ -43,7 +44,24 @@ hr {
 .btn {
     background: green;
     color: #fff;
-    `nt-weight: bold;
+    font-weight: bold;
+}
+.menus {
+    float: right;
+}
+.menus a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    border: 1px solid #eee;
+    padding: 5px 7px;
+    font-size: 13px;
+}
+.menus a:hover {
+    background: #0099cc;
+}
+.float-left {
+    float: left;
 }
 
 header {

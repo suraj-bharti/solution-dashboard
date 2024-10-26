@@ -13,7 +13,10 @@
 <body>
     <div id="app">
         <header>
-            <h2>Solutions Dashbarod</h2>
+            <h2 class="float-left">Solutions Dashbarod</h2>
+			<div class="menus">
+                <a href="./insert.php">Add New</a>
+            </div>
         </header>
 		<div class="boxed">
 			<?php include('filters.php'); ?>

@@ -13,7 +13,10 @@
 <body>
     <div id="app">
         <header>
-            <h2>Insert New Record</h2>
+            <h2 class="float-left">Insert New Record</h2>
+            <div class="menus">
+                <a href="./">Home</a>
+            </div>
         </header>
 		<div class="boxed">
         <form method="post" action="/update">
@@ -30,17 +33,27 @@
 					<label>Sales force id</label>
 					<input type="text" name="sales_force_id" v-model="form.sales_force_id" placeholder="Sales force id">
 				</div>
-				<div class="col-2">
-					<label>Vertical</label>
-					<input type="text" name="vertical" v-model="form.vertical" placeholder="Vertical">
-				</div>
-				<div class="col-2">
+                <div class="col-2">
 					<label>Type of client</label>
 					<input type="text" name="type_of_client" v-model="form.type_of_client" placeholder="Type of client">
 				</div>
 				<div class="col-2">
 					<label>Market served</label>
 					<input type="text" name="market_served" v-model="form.market_served" placeholder="Market served">
+				</div>
+                <div class="col-2">
+                    <label for="">Stataus</label>
+                    <select type="text" name="status" v-model="form.status" placeholder="Status">
+                        <option value="WIP" selected>WIP</option>
+                        <option value="Submitted">Submitted</option>
+                        <option value="Dropped">Dropped</option>
+                        <option value="Closed">Closed</option>
+                        <option value="Hold">Hold</option>
+                    </select>
+                </div>
+				<div class="col-2">
+					<label>Vertical</label>
+					<input type="text" name="vertical" v-model="form.vertical" placeholder="Vertical">
 				</div>
 				<div class="col-2">
 					<label>Response type</label>
@@ -90,38 +103,41 @@
 					<label>Tcv</label>
 					<input type="text" name="tcv" v-model="form.tcv" placeholder="Tcv">
 				</div>
-				<div class="col-2">
+
+                <div class="col-2">
 					<label>Deal term years</label>
 					<input type="text" name="deal_term_years" v-model="form.deal_term_years" placeholder="Deal term years">
 				</div>
-				<div class="col-2">
-					<label>Opportunity</label>
-					<textarea type="text" rows="5" name="opportunity" v-model="form.opportunity" placeholder="Opportunity"></textarea>
-				</div>
-				<div class="col-2">
+                <div class="col-2">
 					<label>Channels</label>
 					<input type="text" name="channels" v-model="form.channels" placeholder="Channels">
-				</div>
-				<div class="col-2">
-					<label>Proposed solution highlights</label>
-					<textarea type="text" rows="5" name="proposed_solution_highlights" v-model="form.proposed_solution_highlights" placeholder="Proposed solution highlights"></textarea>
-				</div>
-				<div class="col-2">
-					<label>Solution drivers win themes</label>
-					<textarea type="text" rows="5" name="solution_drivers_win_themes" v-model="form.solution_drivers_win_themes" placeholder="Solution drivers win themes"></textarea>
 				</div>
 				<div class="col-2">
 					<label>Transformation benefit</label>
 					<input type="text" name="transformation_benefit" v-model="form.transformation_benefit" placeholder="Transformation benefit">
 				</div>
-				<div class="col-2">
+                <div class="col-2">
 					<label>Transformation category</label>
 					<input type="text" name="transformation_category" v-model="form.transformation_category" placeholder="Transformation category">
 				</div>
-				<div class="col-2">
+                <div class="col-2">
 					<label>Tp cloud campus</label>
 					<input type="text" name="tp_cloud_campus" v-model="form.tp_cloud_campus" placeholder="Tp cloud campus">
 				</div>
+				
+                <div class="col-4">
+					<label>Opportunity</label>
+					<textarea type="text" rows="5" name="opportunity" v-model="form.opportunity" placeholder="Opportunity"></textarea>
+				</div>
+				<div class="col-4">
+					<label>Proposed solution highlights</label>
+					<textarea type="text" rows="5" name="proposed_solution_highlights" v-model="form.proposed_solution_highlights" placeholder="Proposed solution highlights"></textarea>
+				</div>
+				<div class="col-4">
+					<label>Solution drivers win themes</label>
+					<textarea type="text" rows="5" name="solution_drivers_win_themes" v-model="form.solution_drivers_win_themes" placeholder="Solution drivers win themes"></textarea>
+				</div>
+			
 				<div class="col-2">
 					<label>Key products offered</label>
 					<input type="text" name="key_products_offered" v-model="form.key_products_offered" placeholder="Key products offered">
@@ -138,13 +154,6 @@
 					<label>Tat</label>
 					<input type="text" name="tat" v-model="form.tat" placeholder="Tat">
 				</div>
-				<select type="text" name="status" v-model="form.status" placeholder="Status">
-                    <option value="WIP" selected>WIP</option>
-                    <option value="Submitted">Submitted</option>
-                    <option value="Dropped">Dropped</option>
-                    <option value="Closed">Closed</option>
-                    <option value="Hold">Hold</option>
-                </select>
 				<div class="col-2">
 					<label>Current document status</label>
 					<input type="text" name="current_document_status" v-model="form.current_document_status" placeholder="Current document status">
@@ -238,7 +247,9 @@
         createApp({
             data() {
                 return {
-                    form: {}
+                    form: {
+                        status: "WIP"
+                    }
                 }
             },
             mounted(){
