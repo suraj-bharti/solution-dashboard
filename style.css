@@ -9,11 +9,15 @@ a.btn {
     border-radius: 5px;
 }
 
+input, select {
+    height: 37px;
+}
+
 input, textarea, select {
     padding: 10px;
     border-radius: 4px;
     width: 100%;
-    border: 1px solid #e9e4e4
+    border: 1px solid #e9e4e4;
 }
 label {
     font-size: 12px;

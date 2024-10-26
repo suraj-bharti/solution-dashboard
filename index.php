@@ -151,9 +151,16 @@
 					]
                 }
             },
-            mounted(){
-                console.log('mounted')
-            }
+			mounted(){
+				this.getData()
+            },
+			methods: {
+				getData() {
+					fetch('https://dummyjson.com/users')
+					.then(res => res.json())
+					.then(console.log);
+				}
+			}
         }).mount('#app')
     </script>
 </body>

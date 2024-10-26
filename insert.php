@@ -152,7 +152,7 @@
 				</div>
 				<div class="col-2">
 					<label>Tat</label>
-					<input type="text" name="tat" v-model="form.tat" required placeholder="Tat">
+					<input type="number" name="tat" v-model="form.tat" required placeholder="Tat">
 				</div>
 				<div class="col-2">
 					<label>Current document status</label>

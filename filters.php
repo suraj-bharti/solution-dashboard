@@ -11,7 +11,7 @@
             </div>
             <div class="col-2">
                 <label>Status</label>
-                <select type="text" name="status" v-model="form.status" placeholder="Status">
+                <select name="status" v-model="form.status" placeholder="Status">
                     <option value="WIP" selected>WIP</option>
                     <option value="Submitted">Submitted</option>
                     <option value="Dropped">Dropped</option>
